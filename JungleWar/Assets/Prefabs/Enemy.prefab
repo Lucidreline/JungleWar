@@ -93,4 +93,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  waveConfig: {fileID: 11400000, guid: 61aac0687870547488997aef38f92e1a, type: 2}
+  waveConfig: {fileID: 11400000, guid: 9fa46b073fb98204fafb63f5e052847e, type: 2}
