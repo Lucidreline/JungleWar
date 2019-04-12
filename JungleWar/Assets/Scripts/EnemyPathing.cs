@@ -5,8 +5,12 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour {
     List<Transform> waypoints;
     int waypointIndex = 0;
-    [SerializeField] float moveSpeed = 2f;
-    [SerializeField] WaveConfig waveConfig;
+    WaveConfig waveConfig;
+
+    public void setWaveConfig(WaveConfig WhatWave)
+    {
+        this.waveConfig = WhatWave;
+    }
 
     
     // Start is called before the first frame update
@@ -28,7 +32,7 @@ public class EnemyPathing : MonoBehaviour {
         if (waypointIndex <= waypoints.Count - 1)
         {
             var targetposition = waypoints[waypointIndex].transform.position;
-            var movementThisFrame = moveSpeed * Time.deltaTime;
+            var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetposition, movementThisFrame);
 
             if (transform.position == targetposition)
