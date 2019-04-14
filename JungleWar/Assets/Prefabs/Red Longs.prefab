@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 9195554408125707785}
   - component: {fileID: 7947740645453069938}
   - component: {fileID: 5164144778096341189}
-  m_Layer: 0
-  m_Name: Enemy 2
+  m_Layer: 9
+  m_Name: Red Longs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  shotCounter: 0
+  minTimeBeforeShots: 1
+  MaxTimeBeforeShots: 1.5
+  EnemyProjectileVelocity: 10
+  EnemyBulletPrefab: {fileID: 6073148896039477620, guid: 1186057e32505fb478505dcb3d60d818,
+    type: 3}
 --- !u!60 &5164144778096341189
 PolygonCollider2D:
   m_ObjectHideFlags: 0
